@@ -1,5 +1,5 @@
 const HomeScreen = (props: any) => {
-  return <h1>Hello, world</h1>;
+  return <p>Homepage coming soon...</p>;
 };
 
 export default HomeScreen;
