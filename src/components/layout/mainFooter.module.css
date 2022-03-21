@@ -1,10 +1,7 @@
 .footer {
-  width: 100vw;
+  width: 100%;
   padding-top: 5rem;
   margin-top: 5rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   height: auto;
   background: #7ea1c4;
   color: #1b365c;
@@ -33,11 +30,11 @@
   list-style: none;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 .socials li a {
-  margin: 2em;
+  margin: 1em;
   font-size: 1.5rem;
   transition: all 0.3s ease 0s;
   /* color: white; */

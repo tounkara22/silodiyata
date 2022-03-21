@@ -1,12 +1,19 @@
 .header {
   width: 100%;
-  height: 5rem;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1b365c;
   padding: 10px 10%;
 }
+
+.icon {
+  color: white;
+  font-size: 40px;
+  display: none;
+}
+
 .logo {
   cursor: pointer;
 }
@@ -27,4 +34,34 @@
 
 .navLinks li a:hover {
   color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .navLinks {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    width: 100%;
+    height: 92vh;
+    background-color: #1b365c;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 2rem;
+  }
+
+  .navLinks li {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    font-variant: small-caps;
+  }
+  .navLinks.hidden {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
 }

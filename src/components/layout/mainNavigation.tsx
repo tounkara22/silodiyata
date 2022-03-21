@@ -2,8 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./mainNavigation.module.css";
 import i18n from "../../language/fr";
+import { IoMenuSharp, IoCloseOutline } from "react-icons/io5";
+import { useState } from "react";
 
-const MainNavigation = (props: any) => {
+const MainNavigation = () => {
+  const [isNavOpen, setNavOpen] = useState(false);
+
+  const navHandler = () => {
+    setNavOpen(!isNavOpen);
+  };
+
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -17,18 +25,30 @@ const MainNavigation = (props: any) => {
       </Link>
 
       <nav>
-        <ul className={styles.navLinks}>
+        <ul className={`${styles.navLinks} ${!isNavOpen && styles.hidden}`}>
           <li>
-            <Link href="/home">{i18n.layout.header.home}</Link>
+            <Link href={"/home"}>
+              <a onClick={navHandler}>{i18n.layout.header.home}</a>
+            </Link>
           </li>
           <li>
-            <Link href="/bookings">{i18n.layout.header.bookings}</Link>
+            <Link href="/bookings">
+              <a onClick={navHandler}>{i18n.layout.header.bookings}</a>
+            </Link>
           </li>
           <li>
-            <Link href="/contacts">{i18n.layout.header.contacts}</Link>
+            <Link href="/contacts">
+              <a onClick={navHandler}>{i18n.layout.header.contacts}</a>
+            </Link>
           </li>
         </ul>
       </nav>
+
+      {isNavOpen ? (
+        <IoCloseOutline className={styles.icon} onClick={navHandler} />
+      ) : (
+        <IoMenuSharp className={styles.icon} onClick={navHandler} />
+      )}
     </header>
   );
 };
