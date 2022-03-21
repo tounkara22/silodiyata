@@ -37,18 +37,18 @@ const HomeScreen = (props: any) => {
         </div>
         <div className={styles.detailsItem}>
           <div className={styles.detailsItemLeft}>
-            <div className={styles.itemDescription}>
-              <h3>{i18n.home.details.detail2.title}</h3>
-              <h4>{i18n.home.details.detail2.subtitle}</h4>
-              <p>{i18n.home.details.detail2.details}</p>
-            </div>
-          </div>
-          <div className={styles.detailsItemRight}>
             <img
               className={styles.itemImage}
               src="https://thumbs.dreamstime.com/b/one-line-drawing-man-sitting-reading-one-line-drawing-man-sitting-reading-vector-linear-illustration-131728993.jpg"
               alt="Comfortable ride"
             />
+          </div>
+          <div className={styles.detailsItemRight}>
+            <div className={styles.itemDescription}>
+              <h3>{i18n.home.details.detail2.title}</h3>
+              <h4>{i18n.home.details.detail2.subtitle}</h4>
+              <p>{i18n.home.details.detail2.details}</p>
+            </div>
           </div>
         </div>
         <div className={styles.detailsItem}>
