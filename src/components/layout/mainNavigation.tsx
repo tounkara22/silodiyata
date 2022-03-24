@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./mainNavigation.module.css";
-import i18n from "../../language/fr";
+import i18n from "../../language/en";
 import { IoMenuSharp, IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 
@@ -34,11 +34,6 @@ const MainNavigation = () => {
           <li>
             <Link href="/bookings">
               <a onClick={navHandler}>{i18n.layout.header.bookings}</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contacts">
-              <a onClick={navHandler}>{i18n.layout.header.contacts}</a>
             </Link>
           </li>
         </ul>

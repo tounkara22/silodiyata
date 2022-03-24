@@ -1,0 +1,54 @@
+.form {
+  padding: 20px;
+}
+
+.formDetails {
+  margin-bottom: 30px;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formControl label {
+  font-size: 20px;
+  color: gray;
+}
+
+.formControl input {
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 5px;
+  height: 50px;
+  border: none;
+  background-color: lightgray;
+}
+
+.formActions {
+  margin-top: 50px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainBtn {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+.mainBtn:hover,
+.mainBtn:active {
+  background-color: gray;
+  color: whitesmoke;
+  transition: all 0.5s ease-in-out 0;
+}
